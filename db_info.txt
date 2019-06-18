@@ -1,0 +1,15 @@
+Currently one table used to keep data (used export info):
+--------------------------------------
+-- Database: `freecodecampdata`
+-- Table structure for table `pictures`
+--
+
+CREATE TABLE `pictures` (
+  `id` int(11) NOT NULL,
+  `dateadded` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `useradded` varchar(100) DEFAULT NULL,
+  `imagename` varchar(100) DEFAULT NULL,
+  `cattype` varchar(100) DEFAULT NULL,
+  `catcharacteristics` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--------------------------------------
