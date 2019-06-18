@@ -25,7 +25,7 @@ else
 
     $increment = ''; //start with no suffix
 
-    while(file_exists('C:/xampp/htdocs/freecodecamp/pictures/'.$filename . $increment . '.' . $fileextension)) {
+    while(file_exists('../../pictures/'.$filename . $increment . '.' . $fileextension)) {
         $increment++;
     }
     $basefilename = $filename . $increment . '.' . $fileextension;
@@ -49,7 +49,7 @@ else
     
     if($success)
     {
-      move_uploaded_file($_FILES['cat-image']['tmp_name'], "C:/xampp/htdocs/freecodecamp/pictures/$basefilename");
+      move_uploaded_file($_FILES['cat-image']['tmp_name'], "../../pictures/$basefilename");
       echo "<script>
       alert('image has been uploaded');
       window.location.href='../index.php';
