@@ -85,7 +85,7 @@
   </script>
   <!-- header-->
 
-  <h2>Default CatPhotoApp from freecodecamp</h2>
+  <h2>Somewhat default CatPhotoApp from freecodecamp</h2>
   <p>Testing basic html, css, some js, db connection etc </p>
   <main>
     <p>Click here to view more <a href="https://pixabay.com/images/search/cat/">cat photos</a>.</p>
