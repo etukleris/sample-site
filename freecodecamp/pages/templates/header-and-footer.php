@@ -3,7 +3,7 @@
   <nav>
     <div class="navbar">
       <a href="index.php">Home</a>
-      <a href="#news">News</a>
+      <a href="photos.php">Photos</a>
       <div class="dropdown">
         <button class="dropbtn">CSS tests 
           <i class="fa fa-caret-down"></i>
