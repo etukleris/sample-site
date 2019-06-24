@@ -13,10 +13,8 @@
     
   }
   .post-images{
-    
-
-    width:  20%;
-    height: 20%;
+    flex: 1 0 15%;
+    max-width:20%;
     overflow: hidden;
     
     
