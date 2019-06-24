@@ -43,9 +43,6 @@
   .user-image{
     max-width: 100%;
     max-height: 100%;
-    margin: auto;
-  
-
     }
   
   </style>
