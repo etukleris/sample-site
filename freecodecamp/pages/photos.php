@@ -16,6 +16,7 @@
     flex: 1 0 15%;
     max-width:20%;
     overflow: hidden;
+    margin:auto 0 auto 0;
     
     
   }
