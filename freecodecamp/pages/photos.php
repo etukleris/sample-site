@@ -45,9 +45,8 @@
   }
   
   </style>
-  
   <link href="../css/header-and-footer.css" rel="stylesheet">
-  <link rel="import" href="templates/header-and-footer.php">
+  
 </head>
 
 <body onload=display_ct();>
