@@ -24,7 +24,7 @@
             background:green;
         }
         .box{
-          //width:98px;
+          //width:100px;
           text-align:center;
          
           
@@ -32,11 +32,10 @@
          
         }
         .box p{
-
           vertical-align: middle;
           margin:0px;
           padding:0px;
-
+          height:100%;
         }
         
         .box1{
@@ -70,15 +69,12 @@
         
     </style>
     <link href="../css/header-and-footer.css" rel="stylesheet">
-    <link rel="import" href="templates/header-and-footer.php">
 </head>
 <body onload=display_ct();>
   <!--import header-->
-  <script>
-    var link = document.querySelector('link[rel=import]');
-    var content = link.import.querySelector('.header');
-    document.body.appendChild(document.importNode(content, true));
-  </script>
+  <?php 
+  include_once("templates/header.php");
+  ?>
   <!-- header-->
   <br>
   <p>Testing out grid template areas</p>
@@ -113,11 +109,9 @@
     </div>
   </main>
   <!--import footer-->
-  <script>
-    var link = document.querySelector('link[rel=import]');
-    var content = link.import.querySelector('.footer');
-    document.body.appendChild(document.importNode(content, true));
-  </script>
+  <?php 
+  include_once("templates/footer.php");
+  ?>
   <!-- footer-->
 </body>
 

@@ -17,9 +17,8 @@
     max-width:20%;
     overflow: hidden;
     margin:auto 0 auto 0;
-    
-    
   }
+  
   .hover-image-container{
     background:white;
     padding-left:2px;
@@ -43,7 +42,7 @@
   .user-image{
     max-width: 100%;
     max-height: 100%;
-    }
+  }
   
   </style>
   
@@ -53,11 +52,9 @@
 
 <body onload=display_ct();>
   <!--import header-->
-  <script>
-    var link = document.querySelector('link[rel=import]');
-    var content = link.import.querySelector('.header');
-    document.body.appendChild(document.importNode(content, true));
-  </script>
+  <?php 
+  include_once("templates/header.php");
+  ?>
   <!-- header-->
   
   <h2>These are the images submitted by people</h2>
@@ -103,10 +100,8 @@
   </main>
   
   <!--import footer-->
-  <script>
-    var link = document.querySelector('link[rel=import]');
-    var content = link.import.querySelector('.footer');
-    document.body.appendChild(document.importNode(content, true));
-  </script>
+  <?php 
+  include_once("templates/footer.php");
+  ?>
   <!-- footer-->
 </body>

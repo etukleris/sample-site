@@ -23,15 +23,13 @@
         }
     </style>
     <link href="../css/header-and-footer.css" rel="stylesheet">
-    <link rel="import" href="templates/header-and-footer.php">
+
 </head>
 <body onload=display_ct();>
   <!--import header-->
-  <script>
-    var link = document.querySelector('link[rel=import]');
-    var content = link.import.querySelector('.header');
-    document.body.appendChild(document.importNode(content, true));
-  </script>
+  <?php 
+  include_once("templates/header.php");
+  ?>
   <!-- header-->
   <br>
   <main>
@@ -57,12 +55,10 @@
       </div>
     </div>
   </main>
-  <!--import footer-->
-  <script>
-    var link = document.querySelector('link[rel=import]');
-    var content = link.import.querySelector('.footer');
-    document.body.appendChild(document.importNode(content, true));
-  </script>
+  <!--import footer-->  
+  <?php 
+  include_once("templates/footer.php");
+  ?>
   <!-- footer-->
 </body>
 
