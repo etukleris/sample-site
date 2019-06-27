@@ -1,6 +1,6 @@
 Currently one table used to keep data (used export info):
---------------------------------------
 -- Database: `freecodecampdata`
+
 -- Table structure for table `pictures`
 --
 
@@ -12,4 +12,15 @@ CREATE TABLE `pictures` (
   `cattype` varchar(100) DEFAULT NULL,
   `catcharacteristics` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
---------------------------------------
+
+
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `idUsers` int(11) NOT NULL,
+  `uidUsers` tinytext NOT NULL,
+  `emailUsers` tinytext NOT NULL,
+  `pwdUsers` longtext NOT NULL,
+  `timeCreated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
