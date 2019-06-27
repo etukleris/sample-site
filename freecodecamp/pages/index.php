@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 
 
@@ -84,6 +89,17 @@
 
   <h2>Somewhat default CatPhotoApp from freecodecamp</h2>
   <p>Testing basic html, css, some js, db connection etc </p>
+  
+  <?php 
+    if (logged_in()) {
+      echo "<p>You are currently logged in</p>";
+    }
+    else
+    {
+       echo "<p>You are currently logged out</p>";
+    }
+  ?>
+ 
   <main>
     <p>Click here to view more <a href="https://pixabay.com/images/search/cat/">cat photos</a>.</p>
     

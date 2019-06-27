@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html style="height:100%;">
+<html>
 <head>
-    <link rel="icon" type="image/ico" href="favicon.ico" sizes="16x16" />
+
     <title>CSS Grid test</title>
     <style>
         .grid{
@@ -27,7 +27,7 @@
     <link href="../css/header-and-footer.css" rel="stylesheet">
     
 </head>
-<body onload=display_ct();style="min-height:100%;">
+<body onload=display_ct();>
   <!--import header-->
   <?php 
   include_once("templates/header.php");
