@@ -3,50 +3,6 @@
 
 <head>
   <title>Users' submitted cat photos</title>
-  
-  <style>
-  
-  .posts-container{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    
-  }
-  .post-images{
-    flex: 1 0 15%;
-    max-width:20%;
-    overflow: hidden;
-    margin:auto 0 auto 0;
-  }
-  
-  .hover-image-container{
-    background:white;
-    padding-left:2px;
-    padding-right:2px;
-    margin-left:2px;
-    margin-right:2px;
-  }
-  .post-images .hover-image-container{
-    position:relative;
-    bottom:50px;
-    left:0px;
-    visibility:hidden;
-  }
-  .post-images:hover .hover-image-container{
-    visibility:visible;
-  }
-  .hover-image-text{
-    font-size: 12px;
-    line-height:12px;
-  }
-  .user-image{
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  </style>
-  <link href="../css/header-and-footer.css" rel="stylesheet">
-  
 </head>
 
 <body onload=display_ct();>
@@ -58,7 +14,7 @@
   
   <h2>These are the images submitted by people</h2>
   
-  <main>
+  <main class="photos-page">
   <?php 
     include('dbconfig.php');
     if (!$con) {
@@ -88,6 +44,10 @@
           }
         echo '</div>';
         
+      }
+      else
+      {
+        echo '<p>No results</p>';
       }
       
     }

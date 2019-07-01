@@ -2,6 +2,12 @@
 include("user logic/functions.php"); 
 
 ?>
+<!-- import css -->
+<link href="../css/mainstyles.css" rel="stylesheet">
+<link href="../css/header-and-footer.css" rel="stylesheet">
+
+
+
 <header class="header header-footer">
   <h1>Titlerooni, checking out the basics</h1>
   <nav>
