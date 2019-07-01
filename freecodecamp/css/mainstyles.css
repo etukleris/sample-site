@@ -35,7 +35,7 @@ p {
 }
 .div-padding-test > ul>li:first-child{
   background-color:purple;
-}
+}  
 .shadow-test{
   box-shadow: 2px 1px 1px 2px grey;
 }
@@ -136,19 +136,19 @@ p {
 
 
 .csstest-3 .box1{
-    //align-self:start;
+    /*align-self:start;*/
     grid-column:1/3;
     grid-row:1/3;
 }
 
 .csstest-3 .box2{
-    //align-self:end;
+    /*align-self:end;*/
     grid-column:3;
     grid-row:1/3;
 }
 
 .csstest-3 .box3{
-    //justify-self:end;
+    /*justify-self:end;*/
     grid-column:2/4;
     grid-row:3;
 }
@@ -208,7 +208,7 @@ p {
   align-content:flex-start;
 }
 .csstest-5 .box-within-a-box{
-  //border: 1px black solid;
+  /*border: 1px black solid;*/
   width:20px;
   height:20px;
 }
@@ -241,7 +241,7 @@ p {
     background:green;
 }
 .grid-test-container-csstest-6 .box{
-  //width:100px;
+  /*width:100px;*/
   text-align:center;
  
   
