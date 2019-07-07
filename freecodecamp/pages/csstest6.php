@@ -12,9 +12,9 @@
     <!-- header-->
     <br>
     <p>Testing out grid template areas</p>
-    <main>
-      <div class="grid-test-container-csstest-6">
-        <div class="box box1 box-header6">
+    <main class="csstest-6">
+      <div class="grid-test-container">
+        <div class="box box1">
           <p>header </p>
         </div>
         <div class="box-main">

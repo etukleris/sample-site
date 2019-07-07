@@ -16,20 +16,32 @@ session_start();
     ?>
     <!-- header-->
 
-    <h2>Somewhat default CatPhotoApp from freecodecamp</h2>
-    <p>Testing basic html, css, some js, db connection etc </p>
     
-    <?php 
-      if (logged_in()) {
-        echo "<p>You are currently logged in</p>";
-      }
-      else
-      {
-         echo "<p>You are currently logged out</p>";
-      }
-    ?>
    
-    <main>
+    <main class="index-page">
+      <?php 
+      
+        if (isset($_GET['login'])){
+            if ($_GET['login'] == "success"){
+            
+            echo '<p class="login-success">You have just logged in!</p>';
+         
+            }
+          }
+          
+        else if (logged_in()) {
+          echo "<p>You are currently logged in</p>";
+        }
+        else
+        {
+           echo "<p>You are currently logged out</p>";
+        }
+      ?>
+  
+      <h2>Not just default CatPhotoApp from freecodecamp</h2>
+      <p>Added more pages, user login/signup, db, image upload, headers & footers and so on</p>
+      <p>Still learning and testing basic html, css, some js, db connection etc </p>
+      
       <p>Click here to view more <a href="https://pixabay.com/images/search/cat/">cat photos</a>.</p>
       
       <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back." class="thick-green-border smaller-image shadow-test"></a>

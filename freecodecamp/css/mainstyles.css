@@ -11,47 +11,47 @@ p {
   font-family: monospace;
 }
 
-.thick-green-border {
+.index-page .thick-green-border {
   border-color: green;
   border-width: 10px;
   border-style: solid;
   border-radius: 50%;
 }
 
-.smaller-image {
+.index-page .smaller-image {
   width: 100px;
 }
-.silver-background{
+.index-page .silver-background{
   background-color: silver;
 }
-.div-padding-test{
+.index-page .div-padding-test{
   border: 1px solid black;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px  0px 0px;
  }
-.div-padding-test >p:first-child{
+.index-page .div-padding-test >p:first-child{
   padding: 5px 0px 0px 5px;
   margin: 1px 0px  0px 0px;
 }
-.div-padding-test > ul>li:first-child{
+.index-page .div-padding-test > ul>li:first-child{
   background-color:purple;
 }  
-.shadow-test{
+.index-page .shadow-test{
   box-shadow: 2px 1px 1px 2px grey;
 }
 
-#cat-submit-input{
+.index-page #cat-submit-input{
   height: 13px;
   padding: 5px 10px 8px 10px;
 }
-#cat-submit-button{
+.index-page #cat-submit-button{
   border-radius: 5px;
   color: white;
   background-color: #0F5897;
   padding: 5px 10px 8px 10px;
 }
 
-#cat-submit-button:hover {
+.index-page #cat-submit-button:hover {
   animation-name: button-background-color;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
@@ -60,6 +60,10 @@ p {
   100% {
     background-color: #4791d0;
   } 
+}
+
+.index-page .login-success{
+  color:green;
 }
 
 
@@ -221,7 +225,7 @@ p {
 
 /* css for csstests6 */
     
-.grid-test-container-csstest-6{
+.csstest-6 .grid-test-container{
   display:grid;
   width:300px;
   height:600px;
@@ -231,16 +235,16 @@ p {
   border-widht:1px;
   grid-template-areas: 
     "header header header"
-    ". main ."
+    ". main main"
     "footer footer footer";
 }
-.grid-test-container-csstest-6 > div:nth-child(odd){
+.csstest-6 .grid-test-container > div:nth-child(odd){
     background:#ddd;
 }
-.grid-test-container-csstest-6 > div:nth-child(even){
+.csstest-6 .grid-test-container > div:nth-child(even){
     background:green;
 }
-.grid-test-container-csstest-6 .box{
+.csstest-6 .grid-test-container .box{
   /*width:100px;*/
   text-align:center;
  
@@ -249,39 +253,39 @@ p {
  
 }
 
-.grid-test-container-csstest-6 p{
+.csstest-6 .grid-test-container p{
   vertical-align: middle;
   margin:0px;
   padding:0px;
   height:100%;
 }
 
-.grid-test-container-csstest-6 .box1{
+.csstest-6 .grid-test-container .box1{
   grid-area: header;
   
 }
-.grid-test-container-csstest-6 .box-main{
+.csstest-6 .grid-test-container .box-main{
   grid-area:main;
 
 }
-.grid-test-container-csstest-6 .box6{
+.csstest-6 .grid-test-container .box6{
   grid-area:footer;
 }
-.grid-test-container-csstest-6 .nested-boxes{
+.csstest-6 .grid-test-container .nested-boxes{
   display:flex;
   flex-wrap:wrap;
   flex-direction:column;
   align-content:flex-start;
 }
-.grid-test-container-csstest-6 .box-within-a-box{
+.csstest-6 .grid-test-container .box-within-a-box{
 
   width:20px;
   height:20px;
 }
-.grid-test-container-csstest-6 .box-within-a-box:nth-child(odd){
+.csstest-6 .grid-test-container .box-within-a-box:nth-child(odd){
   background:blue;
 }
-.grid-test-container-csstest-6 .box-within-a-box:nth-child(even){
+.csstest-6 .grid-test-container .box-within-a-box:nth-child(even){
   background:yellow;
 }
         
@@ -323,4 +327,32 @@ p {
 .photos-page .user-image{
   max-width: 100%;
   max-height: 100%;
+}
+
+/*signup page styles*/
+.signup-page .signup-error-message{
+  width: 350px;
+  color:red; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.signup-page .signup-container{
+  width: 300px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  
+}
+
+/*login page styles*/
+.login-page .login-error-message{
+  width: 350px;
+  color:red; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-page .login-container{
+  width: 300px;
+  margin-left: auto; 
+  margin-right: auto; 
+
 }

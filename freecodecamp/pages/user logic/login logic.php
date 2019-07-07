@@ -35,7 +35,7 @@ if (isset($_POST['login-submit'])){
           $pwdCheck = password_verify($password, $resultPwd);
           
           if(!$pwdCheck){
-            header("Location: ../login.php?error=wrongpwd");
+            header("Location: ../login.php?error=wrongpwd&mailuid=".$mailuid);
             exit();
             
           }
