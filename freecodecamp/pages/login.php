@@ -40,6 +40,12 @@
          
         }
       }
+      else if (isset($_GET['creation'])){
+        if ($_GET['creation'] == "success"){
+          echo '<p class="login-success-message">User has been created, log in below</p>';
+        }
+      }
+      
     ?>
         
         

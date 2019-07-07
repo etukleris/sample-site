@@ -56,7 +56,7 @@ if(isset($_POST['signup-submit'])){
           {
             echo "<script>
             alert('User has been created');
-            window.location.href='../index.php?login=success';
+            window.location.href='../login.php?creation=success';
             </script>";
             
           }
