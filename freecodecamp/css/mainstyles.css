@@ -356,3 +356,14 @@ p {
   margin-right: auto; 
 
 }
+
+/*user profile page styles*/
+.user-profile-page .user-profile-container{
+  width: 300px;
+  margin-left: auto; 
+  margin-right: auto; 
+  border:black 1px solid;
+}
+.user-profile-page .user-profile-image{
+  width:300px;
+}
