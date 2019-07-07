@@ -16,6 +16,21 @@ function userExists($username, $con){
 }
 
 
+function emailExists($email, $con){
+  $stmt = $con->prepare("SELECT emailUsers FROM users WHERE emailUsers = ?");
+  $stmt->bind_param("s", $email);
+  if($stmt->execute())
+  {
+      $stmt->bind_result($emailUsers);
+      $stmt->store_result();
+      $stmt->fetch();          
+      if($stmt->num_rows > 0)
+      {
+          return 1;
+      }
+      else return 0;
+  } else return -1; //sql error
+}
 
 function emailOrUserExists($emailOrId, $con){
   $stmt = $con->prepare("SELECT uidUsers, emailUsers FROM users WHERE emailUsers = ? or uidUsers = ?");

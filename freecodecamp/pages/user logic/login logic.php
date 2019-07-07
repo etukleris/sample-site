@@ -17,7 +17,7 @@ if (isset($_POST['login-submit'])){
     else{
       if (emailOrUserExists($mailuid, $con)>0){
         
-        $stmt = $con->prepare("SELECT idUsers, uidUsers, emailUsers, pwdUsers FROM users WHERE uidUsers = ? or emailUsers = ?");
+        $stmt = $con->prepare("SELECT idUsers, uidUsers, emailUsers, pwdUsers, timeCreated FROM users WHERE uidUsers = ? or emailUsers = ?");
         $stmt->bind_param("ss", $mailuid, $mailuid);
         if($stmt->execute())
         {
@@ -31,6 +31,7 @@ if (isset($_POST['login-submit'])){
           $resultUsername = $arr[0]['uidUsers'];
           $resultPwd = $arr[0]['pwdUsers'];
           $resultUserID = $arr[0]['idUsers'];
+          $resultUserCreationDate = $arr[0]['timeCreated'];
           
           $pwdCheck = password_verify($password, $resultPwd);
           
@@ -44,6 +45,7 @@ if (isset($_POST['login-submit'])){
             session_start();
             $_SESSION['userId'] = $resultUsername;
             $_SESSION['userUid'] = $resultUserID;
+            $_SESSION['userCreationDate'] = $resultUserCreationDate;
             
             header("Location: ../index.php?login=success");
             exit();

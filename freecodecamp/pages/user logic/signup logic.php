@@ -2,7 +2,8 @@
 
 if(isset($_POST['signup-submit'])){
   include('../dbconfig.php');
-
+  include('functions.php');
+  
   if (!$con) {
     die('Could not connect: ' . $con->connect_error);
   }
@@ -55,7 +56,7 @@ if(isset($_POST['signup-submit'])){
           {
             echo "<script>
             alert('User has been created');
-            window.location.href='../index.php';
+            window.location.href='../index.php?login=success';
             </script>";
             
           }

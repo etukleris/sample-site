@@ -1,6 +1,9 @@
 <?php 
 include("user logic/functions.php"); 
 
+session_start();
+
+
 ?>
 <!-- import css -->
 <link href="../css/mainstyles.css" rel="stylesheet">
@@ -34,6 +37,7 @@ include("user logic/functions.php");
         if (logged_in()) 
         {
            echo '<a href="user logic/logout.php" style="float:right;">Logout</a>';
+           echo '<a href="user-profile-page.php" style="float:right;">Profile</a>';
         }
         else 
         {
