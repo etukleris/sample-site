@@ -1,6 +1,8 @@
-Currently one table used to keep data (used export info):
+--
 -- Database: `freecodecampdata`
+--
 
+--
 -- Table structure for table `pictures`
 --
 
@@ -14,6 +16,9 @@ CREATE TABLE `pictures` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -22,5 +27,40 @@ CREATE TABLE `users` (
   `uidUsers` tinytext NOT NULL,
   `emailUsers` tinytext NOT NULL,
   `pwdUsers` longtext NOT NULL,
-  `timeCreated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `timeCreated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `imageUser` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `pictures`
+--
+ALTER TABLE `pictures`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`idUsers`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `pictures`
+--
+ALTER TABLE `pictures`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
