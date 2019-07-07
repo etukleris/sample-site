@@ -11,7 +11,7 @@ session_start();
 
 
 
-<header class="header header-footer">
+<header class="header header-footer"> 
   <h1>Titlerooni, checking out the basics</h1>
   <nav>
     <div class="navbar">
@@ -37,7 +37,9 @@ session_start();
         if (logged_in()) 
         {
            echo '<a href="user logic/logout.php" style="float:right;">Logout</a>';
-           echo '<a href="user-profile-page.php" style="float:right;">Profile</a>';
+           if (isset($_SESSION['userId'])){
+             echo '<a href="user-profile-page.php?user='.$_SESSION['userId'].'" style="float:right;">Profile</a>';
+           }
         }
         else 
         {

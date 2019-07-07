@@ -26,12 +26,17 @@
       if (isset($_GET['error'])){
         if ($_GET['error'] == "nodata"){
           
-         echo '<p class="login-error-message">Fill in all the fields!</p>';
+          echo '<p class="login-error-message">Fill in all the fields!</p>';
        
         }
         else if ($_GET['error'] == "wrongpwd"){
           
          echo '<p class="login-error-message">Password was incorret!</p>';
+         
+        }
+        else if ($_GET['error'] == "nouser"){
+          
+         echo '<p class="login-error-message">User does not exist!</p>';
          
         }
       }
@@ -41,8 +46,8 @@
       <div class="login-container">
         <h1>User login</h1>
         <form action="user logic/login logic.php" method="post">
-          <input type="text" name="mailuid" placeholder="Username or email" value="<?php echo $mailuid ?>" ><br>
-          <input type="password" name="pwd" placeholder="Password" ><br>
+          <input type="text" name="mailuid" placeholder="Username or email" value="<?php echo $mailuid ?>" required><br>
+          <input type="password" name="pwd" placeholder="Password" required><br>
           <button type="submit" name="login-submit">Login</button>
         
         </form>
