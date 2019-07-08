@@ -31,8 +31,9 @@ session_start();
           <a href="csstest6.php">Css6</a>
           
         </div>
-      </div> 
       
+      </div> 
+      <a href="dummy.php">Dummy page</a>
       <?php 
         if (logged_in()) 
         {
