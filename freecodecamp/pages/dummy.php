@@ -14,6 +14,7 @@
 
   <main class="dummy-page">
   <h1> Dummy page to test git, branches and merging </h1>
+  <p>adding some change</p>
   </main>
   
   <!--import footer-->
