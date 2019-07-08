@@ -298,27 +298,27 @@ p {
   
 }
 .photos-page .post-images{
-  flex: 1 0 15%;
-  max-width:20%;
-  overflow: hidden;
+  position:relative;
+  flex: 1 0 20%;
+  max-height:20%;
   margin:auto 0 auto 0;
 }
 
-.photos-page .hover-image-container{
-  background:white;
-  padding-left:2px;
-  padding-right:2px;
-  margin-left:2px;
-  margin-right:2px;
-}
+
 .photos-page .post-images .hover-image-container{
-  position:relative;
-  bottom:70px;
-  left:0px;
+  position:absolute;
+  background:white;
+  padding:0px 2px 0px 2px;
+  margin:0px 2px 0px 2px;
+  overflow:hidden;
+  bottom:30px;
   visibility:hidden;
+  height:0px;
+  
 }
 .photos-page .post-images:hover .hover-image-container{
   visibility:visible;
+  height:auto;
 }
 .photos-page .hover-image-text{
   font-size: 12px;
