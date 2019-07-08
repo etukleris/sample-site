@@ -36,7 +36,7 @@
                 $resultUserImageName =$arr[0]['imageUser'];
                 
                 
-                echo '<img class="user-profile-image" src="../profile-pictures/'.$resultUserImageName.'" onerror="this.onerror=null; this.src=\'../profile-pictures/noimage2.png\'" alt="User\'s image">';
+                echo '<img class="user-profile-image" src="../pictures/profile-pictures/'.$resultUserImageName.'" onerror="this.onerror=null; this.src=\'../pictures/default/noimage2.png\'" alt="User\'s image">';
                 if (isset($_SESSION['userUid'])){
         
                   if($_SESSION['userUid'] == $resultUserID){

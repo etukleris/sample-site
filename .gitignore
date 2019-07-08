@@ -1,0 +1,7 @@
+#exclude pictures
+freecodecamp/pictures/profile-pictures/*
+freecodecamp/pictures/uploaded-pictures/*
+
+#keep folders
+!freecodecamp/pictures/profile-pictures/.gitkeep
+!freecodecamp/pictures/uploaded-pictures/.gitkeep

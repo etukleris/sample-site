@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
 
       $increment = ''; //start with no suffix
 
-      while(file_exists('../../uploaded-pictures/'.$filename . $increment . '.' . $fileextension)) {
+      while(file_exists('../../pictures/uploaded-pictures/'.$filename . $increment . '.' . $fileextension)) {
           $increment++;
       }
       $basefilename = $filename . $increment . '.' . $fileextension;
@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
       
       if($success)
       {
-        move_uploaded_file($_FILES['cat-image']['tmp_name'], "../../uploaded-pictures/$basefilename");
+        move_uploaded_file($_FILES['cat-image']['tmp_name'], "../../pictures/uploaded-pictures/$basefilename");
         echo "<script>
         alert('image has been uploaded');
         window.location.href='../index.php';
