@@ -4,7 +4,7 @@ Sample website for learning purposes. Used xampp stack (apache, mysql) as a plat
 
 Started with notes from freecodecamp tutorials and kept adding and adding some of my own pieces.
 
-Usage: simply put the folder to ../xampp/htdocs folder. Run xampp stack. Site accessible through localhost/test-site/index.php/pages/view/index (will be working on to change the name into something simpler) .
+Usage: simply put the folder to ../xampp/htdocs folder. Run xampp stack. Site accessible through http://localhost/test-site/ .
 
 
 Major changes so far:
