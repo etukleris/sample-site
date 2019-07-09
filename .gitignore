@@ -1,6 +1,8 @@
 #pictures
-public/pictures/profile-pictures/
-!public/pictures/profile-pictures/.gitkeep
+test-site/public/pictures/profile-pictures/
+!test-site/public/pictures/profile-pictures/.gitkeep
 
-public/pictures/uploaded-pictures/
-!public/pictures/uploaded-pictures/.gitkeep
+test-site/public/pictures/uploaded-pictures/
+!test-site/public/pictures/uploaded-pictures/.gitkeep
+
+test-site/readme.rst
