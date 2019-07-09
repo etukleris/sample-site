@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>CSS Grid test2</title>
+  </head>
+
+  <body onload=display_ct();>
+
+    <br>
+    <main class="csstest-2">
+      <div class="grid">
+          <div>
+              <p>lorem ipsum etc </p>
+          </div>
+          <div>
+              <p>lorem ipsum etclorem ipsum
+              etclorem ipsum etclorem ipsum
+              etclorem ipsum etclorem ipsum
+              etclorem ipsum etclorem ipsum
+              etclorem ipsum etclorem ipsum
+              etclorem ipsum etclorem ipsum
+              etclorem ipsum etclorem ipsum 
+              etclorem ipsum etclorem ipsum
+              etclorem ipsum etclorem ipsum
+              etclorem ipsum etclorem ipsum
+              etclorem ipsum etclorem ipsum
+              etclorem ipsum etc </p>
+          </div>
+          <div class="nested">
+              <div>
+                  <p>lorem</p>
+              </div>
+              <div>
+                  <p>lorem</p>
+              </div>
+              <div>
+                  <p>lorem</p>
+              </div>
+          </div>
+          <div>
+              <p>lorem ipsum etc </p>
+          </div>
+          <div>
+              <p>lorem ipsum etc </p>
+          </div>
+          <div>
+              <p>lorem ipsum etc </p>
+          </div>
+
+      </div>
+    </main>
+    
+
+  </body>
+
+</html>

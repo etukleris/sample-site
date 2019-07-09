@@ -1,7 +1,6 @@
-#exclude pictures
-freecodecamp/pictures/profile-pictures/*
-freecodecamp/pictures/uploaded-pictures/*
+#pictures
+public/pictures/profile-pictures/
+!public/pictures/profile-pictures/.gitkeep
 
-#keep folders
-!freecodecamp/pictures/profile-pictures/.gitkeep
-!freecodecamp/pictures/uploaded-pictures/.gitkeep
+public/pictures/uploaded-pictures/
+!public/pictures/uploaded-pictures/.gitkeep
