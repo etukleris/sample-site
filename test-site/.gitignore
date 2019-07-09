@@ -29,10 +29,3 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
-
-#pictures
-public/pictures/profile-pictures/
-!public/pictures/profile-pictures/.gitkeep
-
-public/pictures/uploaded-pictures/
-!public/pictures/uploaded-pictures/.gitkeep
