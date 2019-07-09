@@ -1,18 +1,15 @@
 # sample-site #
 
-Sample website for learning purposes. Used xampp stack (apache, mysql) as a platform. 
+Sample website for learning purposes. Used xampp stack (apache, mysql) as a platform. Moved onto codeigniter as a framework.
 
-Started with notes from freecodecamp tutorials and kept adding some of my own pieces.
+Started with notes from freecodecamp tutorials and kept adding and adding some of my own pieces.
 
-Site still uses mostly static pages. 
+Usage: simply put the folder to ../xampp/htdocs folder. Run xampp stack. Site accessible through localhost/test-site/index.php/pages/view/index (will be working on to change the name into something simpler) .
 
-Usage: simply put the folder to ../xampp/htdocs folder. Run xampp stack. Site accessible through localhost/freecodecamp/pages/index.php .
-
-There are still plenty of work to be done, noticeable additions include: rework/move the whole project to a framework (would likely improve code usability, site security and other); user creation/authentication (which would mean more tables in the DB); more TBD;
 
 Major changes so far:
+Added image upload;
 Added some "dynamic" pages (mainly a page that displays all uploaded photos);
-Added user creation/authentication;
+Added user creation/authentication; User profile page with image upload
 Some extra functions;
-
-Major update now would be to start using some framework.
+Moved onto codeigniter framework
