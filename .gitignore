@@ -1,9 +1,12 @@
 #pictures
-test-site/public/pictures/profile-pictures/
 
-test-site/public/pictures/uploaded-pictures/
+test-site/public/pictures/profile-pictures/*
+
+test-site/public/pictures/uploaded-pictures/*
 
 !test-site/public/pictures/uploaded-pictures/.keep
 !test-site/public/pictures/profile-pictures/.keep
 
 test-site/readme.rst
+
+!.keep
