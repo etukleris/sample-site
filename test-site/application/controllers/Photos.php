@@ -18,17 +18,18 @@ class Photos extends CI_Controller {
                 $this->load->view('templates/footer');
         }
 
-        public function view($photo = NULL)
+        public function view($user_added = NULL)
         {
-                $data['photos_item'] = $this->photos_model->get_photos($photo);
+                $data['photos'] = $this->photos_model->get_photos($user_added);
                 
-                 if (empty($data['photos_item']))
+                 if (empty($data['photos']))
                 {
                         show_404();
                 }
-
-                $data['title'] = $data['photos_item']['useradded'];
-
+                if ($user_added){
+                  $data['title'] = $user_added.'\'s photos';
+                  $data['userName'] =  $user_added;
+                }
                 $this->load->view('templates/header', $data);
                 $this->load->view('photos/view', $data);
                 $this->load->view('templates/footer');

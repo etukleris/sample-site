@@ -6,15 +6,16 @@
                   $this->load->database();
           }
           
-          public function get_photos($photo = FALSE)
+          public function get_photos($user_added = FALSE)
 {
-                  if ($photo === FALSE)
+                  if ($user_added === FALSE)
                   {
                           $query = $this->db->get('pictures');
                           return $query->result_array();
                   }
+                  
 
-                  $query = $this->db->get_where('pictures', array('imagename' => $photo));
-                  return $query->row_array();
+                  $query = $this->db->get_where('pictures', array('useradded' => $user_added));
+                  return $query->result_array();
           }
   }
