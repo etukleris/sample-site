@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
       {
         echo "<script>
         alert('File was not an image');
-        window.location.href='../user-profile-page.php';
+        window.location.href='user-profile-page';
         </script>";
         exit;
       }
@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
 
       $increment = ''; //start with no suffix
 
-      while(file_exists('../../pictures/profile-pictures/'.$filename . $increment . '.' . $fileextension)) {
+      while(file_exists(FCPATH.'public/pictures/profile-pictures/'.$filename . $increment . '.' . $fileextension)) {
           $increment++;
       }
       $basefilename = $filename . $increment . '.' . $fileextension;
@@ -40,18 +40,17 @@ if(isset($_POST['submit'])){
       
       if($success)
       {
-        move_uploaded_file($_FILES['profile-image']['tmp_name'], "../../pictures/profile-pictures/$basefilename");
+        move_uploaded_file($_FILES['profile-image']['tmp_name'], FCPATH."public/pictures/profile-pictures/$basefilename");
         echo "<script>
         alert('profile picture has been updated');
-        window.location.href='index';
         </script>";
-        
+        header("Location: index?upload=success");
       }
       else{
         echo "<script>
         alert('Image was not updated');
-        window.location.href='../index.php';
         </script>";
+        header("Location: index?upload=failed");
       }
     }
     
@@ -61,7 +60,7 @@ if(isset($_POST['submit'])){
   } 
   else
   {
-    header("Location: ../index.php");
+    header("Location: index");
     exit();
   }
 ?>

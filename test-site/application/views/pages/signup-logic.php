@@ -82,8 +82,8 @@ if(isset($_POST['signup-submit'])){
           else{
             echo "<script>
             alert('Failed to create a user');
-            window.location.href='signup';
             </script>";
+            header("Location: index");
           }
       }
 

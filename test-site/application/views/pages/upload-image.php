@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['submit'])){
-  include('../dbconfig.php');
+  include('dbconfig.php');
   if (!$con) {
     die('Could not connect: ' . $con->connect_error);
   }
@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
       {
         echo "<script>
         alert('File was not an image');
-        window.location.href='../index.php';
+        window.location.href='index';
         </script>";
         exit;
       }
@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
 
       $increment = ''; //start with no suffix
 
-      while(file_exists('../../pictures/uploaded-pictures/'.$filename . $increment . '.' . $fileextension)) {
+      while(file_exists(FCPATH.'public/pictures/uploaded-pictures/'.$filename . $increment . '.' . $fileextension)) {
           $increment++;
       }
       $basefilename = $filename . $increment . '.' . $fileextension;
@@ -50,18 +50,18 @@ if(isset($_POST['submit'])){
       
       if($success)
       {
-        move_uploaded_file($_FILES['cat-image']['tmp_name'], "../../pictures/uploaded-pictures/$basefilename");
+        move_uploaded_file($_FILES['cat-image']['tmp_name'], FCPATH."public/pictures/uploaded-pictures/$basefilename");
+        echo "<p>Image has been uploaded</p>";
         echo "<script>
         alert('image has been uploaded');
-        window.location.href='../index.php';
         </script>";
-        
+        header("Location: index");
       }
       else{
         echo "<script>
         alert('Image was not uploaded');
-        window.location.href='../index.php';
         </script>";
+        header("Location: index?login=success");
       }
     }
     
@@ -71,7 +71,7 @@ if(isset($_POST['submit'])){
   } 
   else
   {
-    header("Location: ../index.php");
+    header("Location: index");
     exit();
   }
   ?>

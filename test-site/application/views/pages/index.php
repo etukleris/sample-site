@@ -1,14 +1,25 @@
     <main class="index-page">
       <?php 
-      
+
         if (isset($_GET['login'])){
-            if ($_GET['login'] == "success"){
-            
-            echo '<p class="login-success">You have just logged in!</p>';
-         
-            }
-          }
+          if ($_GET['login'] == "success"){
           
+          echo '<p class="login-success">You have just logged in!</p>';
+       
+          }
+        }
+          
+        if (isset($_GET['upload'])){
+          if ($_GET['upload'] == "success"){
+          
+          echo '<p class="upload-success">Your image has been uploaded!</p>';
+       
+          }
+          else if ($_GET['upload'] == "failed"){
+            echo '<p class="upload-failed">Your image has not been uploaded.</p>';
+          }
+        }
+        
         else if (logged_in()) {
           echo "<p>You are currently logged in</p>";
         }
@@ -41,29 +52,35 @@
           <li>other cats</li>
         </ol>
       </div>
-      
-      <form action="upload-image" method="post" enctype="multipart/form-data">
-        <fieldset>
-          <legend>Want to add a cat? Choose what best defines it</legend>
-          
-          <input id="indoor-or-outdoor1" type="radio" name="indoor-outdoor" value="Indoor" checked>
-          <label for="indoor-or-outdoor1">Indoor</label>
-          <input id="indoor-or-outdoor2" type="radio" value="Outdoor" name="indoor-outdoor">
-          <label for="indoor-or-outdoor2" >Outdoor</label><br>
-          
-          <input id="personality1" type="checkbox" name="personality[]" value="Loving" checked>
-          <label for="personality1">Loving</label>
-          <input id="personality2" type="checkbox" name="personality[]" value="Lazy">
-          <label for="personality2">Lazy</label>
-          <input id="personality3" type="checkbox" name="personality[]" value="Energetic">
-          <label for="personality3">Energetic</label><br>
-          <!--<input type="text" placeholder="cat photo URL" required id="cat-submit-input">-->
-          
-          <input type="text" placeholder="your username"  id="cat-submit-username" name="cat-submit-username" required>
-          <input type="file" name="cat-image" accept="image/png,image/jpeg,image/gif" required>
-          <button type="submit" id="cat-submit-button" name="submit">Submit</button>
-        </fieldset>
-      </form>
-      
+      <?php if (logged_in()) {
+          ?>
+        
+          <form action="upload-image" method="post" enctype="multipart/form-data">
+            <fieldset>
+              <legend>Want to add a cat? Choose what best defines it</legend>
+              
+              <input id="indoor-or-outdoor1" type="radio" name="indoor-outdoor" value="Indoor" checked>
+              <label for="indoor-or-outdoor1">Indoor</label>
+              <input id="indoor-or-outdoor2" type="radio" value="Outdoor" name="indoor-outdoor">
+              <label for="indoor-or-outdoor2" >Outdoor</label><br>
+              
+              <input id="personality1" type="checkbox" name="personality[]" value="Loving" checked>
+              <label for="personality1">Loving</label>
+              <input id="personality2" type="checkbox" name="personality[]" value="Lazy">
+              <label for="personality2">Lazy</label>
+              <input id="personality3" type="checkbox" name="personality[]" value="Energetic">
+              <label for="personality3">Energetic</label><br>
+              <!--<input type="text" placeholder="cat photo URL" required id="cat-submit-input">-->
+              
+              <input type="hidden" id="cat-submit-username" name="cat-submit-username" value="<?php echo $_SESSION['userId'] ?>">
+              <input type="file" name="cat-image" accept="image/png,image/jpeg,image/gif" required>
+              <button type="submit" id="cat-submit-button" name="submit">Submit</button>
+            </fieldset>
+          </form>
+         <?php }
+        else
+        {
+           echo "<p>You must be logged in to submit cat photos</p>";
+        } ?>
     </main>
     
