@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>User profile page</title>
-  </head>
-
-  <body onload=display_ct();>
-
-    <?php 
-
-    include_once("dbconfig.php");
-    ?>
-
-
     <main class="user-profile-page">
       <div class="user-profile-container">
-      
+
       
         <?php
           if (isset($_GET['user'])){
+            include_once("dbconfig.php");
             if (userExists($_GET['user'], $con)){
               
               $stmt = $con->prepare("SELECT idUsers, uidUsers, timeCreated, imageUser FROM users WHERE uidUsers = ?");
@@ -64,10 +51,6 @@
           else {
             echo "<p>Place for user profile</p>";
           }
-        
         ?>
       </div>
     </main>
-    
-  </body>
-</html>

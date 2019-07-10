@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Users' submitted cat photos</title>
-</head>
-
-<body onload=display_ct();>
-
-  <h2>These are the images submitted by people</h2>
-  
   <main class="photos-page">
+  <h2>These are the images submitted by people</h2>
   <?php 
     include('dbconfig.php');
     if (!$con) {
@@ -48,10 +38,5 @@
     }
       
   ?>
-  
-  
-  
   </main>
-  
-
-</body>
+ 

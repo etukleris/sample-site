@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>CSS Grid test3</title>
-  </head>
-
-  <body onload=display_ct();>
- 
-    <br>
     <main class="csstest-3">
       <div class="grid">
           <div class="box box1">
@@ -21,9 +12,5 @@
           <div class="box box4">
               <p>box 4 </p>
           </div>
-
       </div>
     </main>
-
-  </body>
-</html>

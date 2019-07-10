@@ -75,12 +75,9 @@ if(isset($_POST['signup-submit'])){
               $_SESSION['userUid'] = $resultUserID;
               $_SESSION['userCreationDate'] = $resultUserCreationDate;
             
-              
               header("Location: index?login=success");
               exit();
-       
             }
-       
           }
           else{
             echo "<script>
@@ -88,13 +85,9 @@ if(isset($_POST['signup-submit'])){
             window.location.href='signup';
             </script>";
           }
-        
-            
-
       }
 
     }
-      
     mysqli_close($con);
   }
   

@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-      <title>CSS Grid test</title>
-  </head>
-
-  <body onload=display_ct();>
-
-    <br>
     <main class="csstest-1">
       <div class="grid">
           <div>
@@ -24,8 +14,3 @@
           </div>
       </div>
     </main>
-    
-
-  </body>
-
-</html>

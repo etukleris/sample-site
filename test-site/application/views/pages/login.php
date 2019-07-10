@@ -1,47 +1,30 @@
-<!DOCTYPE html>
-<html>
-  <head>
-     <title>User login page</title>
-  </head>
-  
-  <body onload=display_ct();>
-
     <main class="login-page">
     
-    <?php 
-      if (isset($_GET['mailuid'])){
-        $mailuid = $_GET['mailuid'];
-          
-      }
-      else{
-        $mailuid = "";
-      }
-        
-        
-      if (isset($_GET['error'])){
-        if ($_GET['error'] == "nodata"){
-          
-          echo '<p class="login-error-message">Fill in all the fields!</p>';
-       
+      <?php 
+        if (isset($_GET['mailuid'])){
+          $mailuid = $_GET['mailuid'];
         }
-        else if ($_GET['error'] == "wrongpwd"){
-          
-         echo '<p class="login-error-message">Password was incorret!</p>';
-         
+        else{
+          $mailuid = "";
         }
-        else if ($_GET['error'] == "nouser"){
-          
-         echo '<p class="login-error-message">User does not exist!</p>';
-         
+
+        if (isset($_GET['error'])){
+          if ($_GET['error'] == "nodata"){
+            echo '<p class="login-error-message">Fill in all the fields!</p>';
+          }
+          else if ($_GET['error'] == "wrongpwd"){
+           echo '<p class="login-error-message">Password was incorret!</p>';
+          }
+          else if ($_GET['error'] == "nouser"){
+           echo '<p class="login-error-message">User does not exist!</p>';
+          }
         }
-      }
-      else if (isset($_GET['creation'])){
-        if ($_GET['creation'] == "success"){
-          echo '<p class="login-success-message">User has been created, log in below</p>';
+        else if (isset($_GET['creation'])){
+          if ($_GET['creation'] == "success"){
+            echo '<p class="login-success-message">User has been created, log in below</p>';
+          }
         }
-      }
-      
-    ?>
+      ?>
         
         
       <div class="login-container">
@@ -57,7 +40,3 @@
       </div>
 
     </main>
-    
-
-  </body>
-</html>

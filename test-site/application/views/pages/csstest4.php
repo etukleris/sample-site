@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>CSS Grid test4</title>
-  </head>
-
-  <body onload=display_ct();>
-
-    <br>
     <main class="csstest-4">
       <div class="row">
         <div class="inside inside-left">Left</div>
@@ -30,7 +21,3 @@
         </div>
       </div>
     </main>
-
-  </body>
-
-</html>

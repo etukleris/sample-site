@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>CSS Grid test6</title>
-  </head>
-  
-  <body onload=display_ct();>
-
-    <br>
-    <p>Testing out grid template areas</p>
     <main class="csstest-6">
+      <p>Testing out grid template areas</p>
       <div class="grid-test-container">
         <div class="box box1">
           <p>header </p>
@@ -28,17 +19,10 @@
           </div>
         </div>
         <div class="box nested-boxes box6">
-        
           <?php for ($i = 0; $i<12; $i++) {
             echo '<div class="box-within-a-box"> </div>';
-          }
-          ?>
+          } ?>
           <p>footer</p>
         </div>
-
       </div>
     </main>
-
-  </body>
-
-</html>

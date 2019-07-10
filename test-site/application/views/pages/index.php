@@ -1,20 +1,3 @@
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>testsite </title>
-  </head>
-
-  <body onload=display_ct();>
-    <!--import header-->
-    <?php 
-    #include_once("templates/header.php");
-    ?>
-    <!-- header-->
-
-    
-   
     <main class="index-page">
       <?php 
       
@@ -84,11 +67,3 @@
       
     </main>
     
-    <!--import footer-->
-    <?php 
-    #include_once("templates/footer.php");
-    ?>
-    <!-- footer-->
-
-  </body>
-</html>

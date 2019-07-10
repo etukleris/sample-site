@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>CSS Grid test2</title>
-  </head>
-
-  <body onload=display_ct();>
-
-    <br>
     <main class="csstest-2">
       <div class="grid">
           <div>
@@ -46,11 +37,5 @@
           <div>
               <p>lorem ipsum etc </p>
           </div>
-
       </div>
     </main>
-    
-
-  </body>
-
-</html>

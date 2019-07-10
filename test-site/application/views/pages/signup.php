@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>User sign up page</title>
-  </head>
-
-  <body onload=display_ct();>
-
     <main class="signup-page">
     
     <?php 
       if (isset($_GET['uid'])){
         $uid = $_GET['uid'];
-          
         }
       else{
         $uid = "";
@@ -22,37 +13,22 @@
       else{
         $email = "";
       }
-    
-    
-    
-    
+
       if (isset($_GET['error'])){
-       
         if ($_GET['error'] == "nodata"){
-          
          echo '<p class="signup-error-message">Fill in all the fields!</p>';
-       
         }
         else if ($_GET['error'] == "invalidusername"){
-          
          echo '<p class="signup-error-message">Username should only contain letters and numbers!</p>';
-         
         } 
-        
         else if ($_GET['error'] == "passwordcheck"){
-          
          echo '<p class="signup-error-message">Your passwords do not match!</p>';
-          
         } 
         else if ($_GET['error'] == "userexists"){
-          
          echo '<p class="signup-error-message">Username already exists!</p>';
-          
         } 
         else if ($_GET['error'] == "emailexists"){
-          
          echo '<p class="signup-error-message">Email already exists!</p>';
-          
         } 
       }
     ?>
@@ -69,7 +45,3 @@
       </div>
 
     </main>
-    
-
-  </body>
-</html>
