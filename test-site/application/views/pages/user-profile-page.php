@@ -38,6 +38,7 @@
                 }
                 echo "<p>Username: ".$resultUsername."</p>";
                 echo "<p>Time created: ".$resultUserCreationDate."</p>";
+                echo "<p><a href='photos?user-photos=".$_SESSION['userId']."'>User's photos</a></p>";
                 
               }
               else{
