@@ -60,5 +60,6 @@ $route['user-profile-page/(:any)'] = 'userprofile/$1';
 
 $route['csstest'] = 'csstestpages';
 $route['csstest/(:any)'] = 'csstestpages/view/$1';
+//$route['upload']='upload';
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';

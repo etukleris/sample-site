@@ -52,6 +52,8 @@
           <li>other cats</li>
         </ol>
       </div>
+      
+      <!--
       <?php if (logged_in()) {
           ?>
         
@@ -70,14 +72,45 @@
               <label for="personality2">Lazy</label>
               <input id="personality3" type="checkbox" name="personality[]" value="Energetic">
               <label for="personality3">Energetic</label><br>
-              <!--<input type="text" placeholder="cat photo URL" required id="cat-submit-input">-->
-              
+
               <input type="hidden" id="cat-submit-username" name="cat-submit-username" value="<?php echo $_SESSION['userId'] ?>">
               <input type="file" name="cat-image" accept="image/png,image/jpeg,image/gif" required>
               <button type="submit" id="cat-submit-button" name="submit">Submit</button>
             </fieldset>
           </form>
          <?php }
+        else
+        {
+           echo "<p>You must be logged in to submit cat photos</p>";
+        } ?>
+        
+        
+        -->
+        <?php if (logged_in()) {
+          ?>
+          <?php  if(isset($error)){ echo $error;}?>
+            <p> Want to upload an image? Select what best describes your cat: </p>
+
+            <?php echo form_open_multipart('pages/do_upload');?>
+              <input id="indoor-or-outdoor1" type="radio" name="indoor-outdoor" value="Indoor" checked>
+              <label for="indoor-or-outdoor1">Indoor</label>
+              <input id="indoor-or-outdoor2" type="radio" value="Outdoor" name="indoor-outdoor">
+              <label for="indoor-or-outdoor2" >Outdoor</label><br>
+              
+              <input id="personality1" type="checkbox" name="personality[]" value="Loving" checked>
+              <label for="personality1">Loving</label>
+              <input id="personality2" type="checkbox" name="personality[]" value="Lazy">
+              <label for="personality2">Lazy</label>
+              <input id="personality3" type="checkbox" name="personality[]" value="Energetic">
+              <label for="personality3">Energetic</label><br>
+              
+              <input type="file" name="userfile" size="20" />
+              <input type="hidden" id="cat-submit-username" name="cat-submit-username" value="<?php echo $_SESSION['userId'] ?>">
+            
+            <input type="submit" value="upload" id="cat-submit-button"/>
+
+            </form>
+        <?php }
         else
         {
            echo "<p>You must be logged in to submit cat photos</p>";
