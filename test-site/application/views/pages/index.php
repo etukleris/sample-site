@@ -55,7 +55,7 @@
       <?php if (logged_in()) {
           ?>
         
-          <form action="upload-image" method="post" enctype="multipart/form-data">
+          <form action="<?php echo base_url().'photos/upload-image' ?> " method="post" enctype="multipart/form-data">
             <fieldset>
               <legend>Want to add a cat? Choose what best defines it</legend>
               

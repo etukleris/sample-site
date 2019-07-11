@@ -31,6 +31,7 @@ class UserProfile extends CI_Controller {
                   $data['title'] = $username.'\'s profile';
                   $data['userName'] =  $username;
                 }
+                
                 $this->load->view('templates/header', $data);
                 $this->load->view('user-profile-page/view', $data);
                 $this->load->view('templates/footer');
@@ -53,7 +54,6 @@ class UserProfile extends CI_Controller {
                     $this->load->view('templates/header', $data);
                     $this->load->view('user-profile-page/signup');
                     $this->load->view('templates/footer');
-
                 }
                 else
                 {
@@ -61,12 +61,8 @@ class UserProfile extends CI_Controller {
                     $this->user_profile_model->create_new_user();
                     $this->load->view('templates/header', $data);
                     $this->load->view('user-profile-page/success');
-                    $this->load->view('templates/footer');
-                    
+                    $this->load->view('templates/footer');   
                 }
-                
-                
-                
         }
         public function login()
         {
@@ -100,15 +96,10 @@ class UserProfile extends CI_Controller {
                       $this->load->view('templates/header', $data);
                       $this->load->view('user-profile-page/status-page');
                       $this->load->view('templates/footer');
-                    }
-                      
-                    
-                    
-                }
-                
-                
-                
+                    }   
+                }                
         }
+        
         public function logout(){
           
           $this->user_profile_model->userLogout();
@@ -162,5 +153,12 @@ class UserProfile extends CI_Controller {
                 return false;
             }
           
+        }
+
+        public function uploadProfileImage () {
+                $data = $this->input->post(NULL, TRUE);
+                $this->load->view('templates/header', $data);
+                $this->load->view('user-profile-page/upload-profile-image', $data);
+                $this->load->view('templates/footer');
         }
 }

@@ -49,11 +49,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$route['photos/upload-image'] = 'photos/uploadImage';
 $route['photos'] = 'photos';
 $route['photos/(:any)'] = 'photos/view/$1';
 $route['user-profile-page/user'] = 'userprofile';
 $route['user-profile-page/user/(:any)'] = 'userprofile/view/$1';
 $route['user-profile-page/signup'] = 'userprofile/signup';
+$route['user-profile-page/upload-profile-image'] = 'userprofile/uploadProfileImage';
 $route['user-profile-page/(:any)'] = 'userprofile/$1';
 
 $route['csstest'] = 'csstestpages';
