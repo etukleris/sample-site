@@ -41,7 +41,7 @@ session_start();
           {
              echo '<a href="logout" style="float:right;">Logout</a>';
              if (isset($_SESSION['userId'])){
-               echo '<a href="user-profile-page?user='.$_SESSION['userId'].'" style="float:right;">Profile</a>';
+               echo '<a href="'.base_url('user-profile-page/').$_SESSION['userId'].'" style="float:right;">Profile</a>';
              }
           }
           else 

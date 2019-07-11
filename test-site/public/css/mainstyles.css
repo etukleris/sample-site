@@ -304,7 +304,7 @@ p {
 }
 .photos-page .post-images{
   position:relative;
-  flex: 1 0 20%;
+  flex: 0 1 20%;
   max-height:20%;
   margin:auto 0 auto 0;
 }
