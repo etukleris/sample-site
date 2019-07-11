@@ -5,7 +5,7 @@
           if (isset($_SESSION['userUid'])){
 
             if($_SESSION['userUid'] == $userProfile['idUsers']){
-              echo '<form action="upload-profile-image" method="post" enctype="multipart/form-data">         
+              echo '<form action="'.base_url('upload-profile-image').'" method="post" enctype="multipart/form-data">         
                       <legend>Change profile picture</legend>
                       <input type="hidden" name="userUid" value="'.$userProfile['idUsers'].'">
                       <input type="file" name="profile-image" accept="image/png,image/jpeg,image/gif" required>
