@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['photos/(:any)'] = 'photos/view/$1';
 $route['photos'] = 'photos';
-$route['csstests/(:any)'] = 'pages/view/csstest/csstest1.php';
+$route['csstest'] = 'csstestpages';
+$route['csstest/(:any)'] = 'csstestpages/view/$1';
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';

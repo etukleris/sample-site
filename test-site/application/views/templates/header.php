@@ -26,12 +26,12 @@ session_start();
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="<?php echo base_url('csstest1')?>">Css1</a>
-            <a href="<?php echo base_url('csstest2')?>">Css2</a>
-            <a href="<?php echo base_url('csstest3')?>">Css3</a>
-            <a href="<?php echo base_url('csstest4')?>">Css4</a>
-            <a href="<?php echo base_url('csstest5')?>">Css5</a>
-            <a href="<?php echo base_url('csstest6')?>">Css6</a>
+            <a href="<?php echo base_url('csstest/csstest1')?>">Css1</a>
+            <a href="<?php echo base_url('csstest/csstest2')?>">Css2</a>
+            <a href="<?php echo base_url('csstest/csstest3')?>">Css3</a>
+            <a href="<?php echo base_url('csstest/csstest4')?>">Css4</a>
+            <a href="<?php echo base_url('csstest/csstest5')?>">Css5</a>
+            <a href="<?php echo base_url('csstest/csstest6')?>">Css6</a>
           </div>
         </div> 
         <a href="<?php echo base_url('dummy')?>">Dummy page</a>
