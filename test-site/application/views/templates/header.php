@@ -1,7 +1,3 @@
-<?php 
-session_start();
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -39,14 +35,14 @@ session_start();
         <?php 
           if (logged_in()) 
           {
-             echo '<a href="logout" style="float:right;">Logout</a>';
+             echo '<a href="'.base_url().'user-profile-page/logout" style="float:right;">Logout</a>';
              if (isset($_SESSION['userId'])){
-               echo '<a href="'.base_url('user-profile-page/').$_SESSION['userId'].'" style="float:right;">Profile</a>';
+               echo '<a href="'.base_url('user-profile-page/user/').$_SESSION['userId'].'" style="float:right;">Profile</a>';
              }
           }
           else 
           {
-            echo '<a href="login" style="float:right;">Login</a>';
+            echo '<a href="'.base_url().'user-profile-page/login" style="float:right;">Login</a>';
           }
 
           

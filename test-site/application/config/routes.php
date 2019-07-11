@@ -51,8 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['photos'] = 'photos';
 $route['photos/(:any)'] = 'photos/view/$1';
-$route['user-profile-page'] = 'userprofile';
-$route['user-profile-page/(:any)'] = 'userprofile/view/$1';
+$route['user-profile-page/user'] = 'userprofile';
+$route['user-profile-page/user/(:any)'] = 'userprofile/view/$1';
+$route['user-profile-page/signup'] = 'userprofile/signup';
+$route['user-profile-page/(:any)'] = 'userprofile/$1';
+
 $route['csstest'] = 'csstestpages';
 $route['csstest/(:any)'] = 'csstestpages/view/$1';
 $route['(:any)'] = 'pages/view/$1';
