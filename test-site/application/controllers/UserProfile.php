@@ -107,8 +107,6 @@ class UserProfile extends CI_Controller {
                   
         }
         public function userExists($username) {
-            //$this->load->library('form_validation');
-            //$this->load->model('user_profile_model');
             $is_exist = $this->user_profile_model->userExists($username);
 
             if ($is_exist) {
@@ -123,8 +121,6 @@ class UserProfile extends CI_Controller {
 
         
         public function emailExists($email) {
-            //$this->load->library('form_validation');
-            //$this->load->model('user_profile_model');
             $is_exist = $this->user_profile_model->emailExists($email);
 
             if ($is_exist) {
@@ -160,5 +156,35 @@ class UserProfile extends CI_Controller {
                 $this->load->view('templates/header', $data);
                 $this->load->view('user-profile-page/upload-profile-image', $data);
                 $this->load->view('templates/footer');
+        }
+        
+        public function do_upload()
+        {
+            $config['upload_path']          = FCPATH.'public/pictures/profile-pictures/';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['max_size']             = 100;
+            $config['max_width']            = 1024;
+            $config['max_height']           = 768;
+
+            $this->load->library('upload', $config);
+            
+            if ( ! $this->upload->do_upload('profile-image'))
+            {
+                    $error = array('error' => $this->upload->display_errors());
+                    $data['title']= "Upload error";
+                    $this->load->view('templates/header', $data);
+                    $this->load->view('user-profile-page/status-page', $error);
+                    $this->load->view('templates/footer');
+            }
+            else
+            {
+                    $data = array('upload_data' => $this->upload->data());
+                    $this->user_profile_model->upload_profile_image($data['upload_data']);
+                    $data['title']= "Upload success";
+                    $data['status'] = "Profile image uploaded";
+                    $this->load->view('templates/header', $data);
+                    $this->load->view('user-profile-page/status-page', $data);
+                    $this->load->view('templates/footer');
+            }
         }
 }

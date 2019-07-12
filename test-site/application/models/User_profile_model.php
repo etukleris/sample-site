@@ -85,6 +85,19 @@
             session_regenerate_id(true);
             
           }
+          public function upload_profile_image($uploadData)
+          {
+              $useraddedID = $this->input->post('userUid');
+              $imagename = $uploadData['file_name'];
+
+                      
+              $userData = array(
+                      'imageUser' => $imagename,
+
+                  );
+              $this->db->where('idUsers', $useraddedID);
+              return $this->db->update('users', $userData);
+          }
 
 
   }
