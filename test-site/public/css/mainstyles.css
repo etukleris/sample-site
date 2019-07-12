@@ -342,10 +342,25 @@ p {
   margin-right: auto;
 }
 .signup-page .signup-container{
-  width: 300px; 
+  width: 400px; 
   margin-left: auto; 
   margin-right: auto; 
   
+}
+.signup-page .signup-container ul {
+  display: table;
+}
+
+.signup-page .signup-container li {
+  display: table-row;
+  margin-left:10px;
+
+}
+
+.signup-page .signup-container .signup-label {
+  display: table-cell;
+  margin-left:10px;
+  padding:5px;
 }
 
 /*login page styles*/
@@ -362,10 +377,22 @@ p {
   margin-right: auto;
 }
 .login-page .login-container{
-  width: 300px;
+  width: 400px;
   margin-left: auto; 
   margin-right: auto; 
 
+}
+.login-page .login-container ul {
+  display: table;
+}
+
+.login-page .login-container li {
+  display: table-row;
+}
+
+.login-page .login-container .login-label {
+  display: table-cell;
+  padding:5px;
 }
 
 /*user profile page styles*/

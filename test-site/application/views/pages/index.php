@@ -89,7 +89,7 @@
         <?php if (logged_in()) {
           ?>
           <?php  if(isset($error)){ echo $error;}?>
-            <p> Want to upload an image? Select what best describes your cat: </p>
+            <legend> Want to upload an image? Select what best describes your cat: </legend>
 
             <?php echo form_open_multipart('pages/do_upload');?>
               <input id="indoor-or-outdoor1" type="radio" name="indoor-outdoor" value="Indoor" checked>
