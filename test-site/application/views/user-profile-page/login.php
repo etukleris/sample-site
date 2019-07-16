@@ -10,7 +10,7 @@
             </li>
             <li>
           <label for="pwd" class="login-label">Password</label>
-          <input type="password" name="pwd" placeholder="Username"/><br />
+          <input type="password" name="pwd" placeholder="Password"/><br />
             </li>
             <li>
           <input type="submit" name="submit" value="Login" />
