@@ -72,15 +72,10 @@
                   return false;
               }
           }
-          function user_logOut(){
-            $_SESSION = array();
-            session_unset();
-            session_destroy();
-            session_write_close();
-            setcookie(session_name(),'',0,'/');
-            session_regenerate_id(true);
-            
+          function user_logout(){
+            $this->session->sess_destroy();
           }
+          
           public function upload_profile_image($uploadData)
           {
               $useraddedID = $this->input->post('userUid');
