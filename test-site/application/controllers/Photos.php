@@ -34,8 +34,8 @@ class Photos extends CI_Controller {
                 $this->load->view('photos/view', $data);
                 $this->load->view('templates/footer');
         }
-        public function uploadImage()
-        {echo "hhello";
+        public function upload_image()
+        {
                 $data = $this->input->post(NULL, TRUE);
                 $this->load->view('templates/header', $data);
                 $this->load->view('photos/upload-image', $data);

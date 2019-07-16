@@ -29,9 +29,9 @@
     {
             $config['upload_path']          = FCPATH.'public/pictures/uploaded-pictures/';
             $config['allowed_types']        = 'gif|jpg|png';
-            $config['max_size']             = 100;
-            $config['max_width']            = 1024;
-            $config['max_height']           = 768;
+            $config['max_size']             = 1500;
+            $config['max_width']            = 3000;
+            $config['max_height']           = 3000;
 
             $this->load->library('upload', $config);
             

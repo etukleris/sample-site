@@ -10,7 +10,6 @@
           {
                   if ($username === FALSE)
                   {
-                          //$query = $this->db->get('pictures');
                           return [];
                   }
                   
@@ -23,12 +22,9 @@
           {
               $this->load->helper('url');
               $userData = array(
-                      //'idUsers' => $this->input->post('null'),
                       'uidUsers' => $this->input->post('uid'),
                       'emailUsers' => $this->input->post('email'),
                       'pwdUsers' => password_hash($this->input->post('pwd'),PASSWORD_DEFAULT)
-                      //'timeCreated' => $this->input->post('gender'),
-                      //'phone' => $this->input->post('phone')
                   );
               return $this->db->insert('users', $userData);
           }
@@ -53,7 +49,7 @@
                 return False;
               }
           }
-          function userExists($user) {
+          function user_exists($user) {
               $this->db->select('idUsers');
               $this->db->where('uidUsers', $user);
               $query = $this->db->get('users');
@@ -65,7 +61,7 @@
               }
           }
 
-          function emailExists($email) {
+          function email_exists($email) {
               $this->db->select('emailUsers');
               $this->db->where('emailUsers', $email);
               $query = $this->db->get('users');
@@ -76,7 +72,7 @@
                   return false;
               }
           }
-          function userLogOut(){
+          function user_logOut(){
             $_SESSION = array();
             session_unset();
             session_destroy();
@@ -93,7 +89,6 @@
                       
               $userData = array(
                       'imageUser' => $imagename,
-
                   );
               $this->db->where('idUsers', $useraddedID);
               return $this->db->update('users', $userData);

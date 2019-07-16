@@ -43,8 +43,8 @@ class UserProfile extends CI_Controller {
                 //$this->load->helper('form');
                 //$this->load->library('form_validation');
                 
-                $this->form_validation->set_rules('uid', 'Username', 'required|callback_userExists');
-                $this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_emailExists');
+                $this->form_validation->set_rules('uid', 'Username', 'required|callback_user_exists');
+                $this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_email_exists');
                 $this->form_validation->set_rules('pwd', 'Password', 'required');
                 $this->form_validation->set_rules('pwd-repeat', 'Password confirmation', 'required|matches[pwd]');
      
@@ -69,7 +69,7 @@ class UserProfile extends CI_Controller {
                 //$this->load->helper('form');
                 //$this->load->library('form_validation');
                 
-                $this->form_validation->set_rules('mailuid', 'Username or email', 'required|callback_userOrEmailNotExists');
+                $this->form_validation->set_rules('mailuid', 'Username or email', 'required|callback_user_or_email_not_exists');
                 $this->form_validation->set_rules('pwd', 'Password', 'required');
                
                 if ($this->form_validation->run() === FALSE)
@@ -102,16 +102,16 @@ class UserProfile extends CI_Controller {
         
         public function logout(){
           
-          $this->user_profile_model->userLogout();
+          $this->user_profile_model->user_logout();
           header('location:'.base_url().'index');
                   
         }
-        public function userExists($username) {
-            $is_exist = $this->user_profile_model->userExists($username);
+        public function user_exists($username) {
+            $is_exist = $this->user_profile_model->user_exists($username);
 
             if ($is_exist) {
                 $this->form_validation->set_message(
-                    'userExists', 'User already exists.'
+                    'user_exists', 'User already exists.'
                 );    
                 return false;
             } else {
@@ -120,12 +120,12 @@ class UserProfile extends CI_Controller {
         }
 
         
-        public function emailExists($email) {
-            $is_exist = $this->user_profile_model->emailExists($email);
+        public function email_exists($email) {
+            $is_exist = $this->user_profile_model->email_exists($email);
 
             if ($is_exist) {
                 $this->form_validation->set_message(
-                    'emailExists', 'Email already exists.'
+                    'email_exists', 'Email already exists.'
                 );    
                 return false;
             } else {
@@ -133,25 +133,24 @@ class UserProfile extends CI_Controller {
             }
         }
         
-        public function userOrEmailNotExists($mailuid){
+        public function user_or_email_not_exists($mailuid){
             
-            //$this->load->model('user_profile_model');
-            $user_exists = $this->user_profile_model->userExists($mailuid);
-            $email_exists = $this->user_profile_model->emailExists($mailuid);
+            $user_exists = $this->user_profile_model->user_exists($mailuid);
+            $email_exists = $this->user_profile_model->email_exists($mailuid);
             
             if ($user_exists || $email_exists ) {
                 
                 return true;
             } else {
               $this->form_validation->set_message(
-                    'userOrEmailNotExists', 'No such user or email exist.'
+                    'user_or_email_not_exists', 'No such user or email exist.'
                 );    
                 return false;
             }
           
         }
 
-        public function uploadProfileImage () {
+        public function upload_profile_image () {
                 $data = $this->input->post(NULL, TRUE);
                 $this->load->view('templates/header', $data);
                 $this->load->view('user-profile-page/upload-profile-image', $data);
@@ -162,9 +161,9 @@ class UserProfile extends CI_Controller {
         {
             $config['upload_path']          = FCPATH.'public/pictures/profile-pictures/';
             $config['allowed_types']        = 'gif|jpg|png';
-            $config['max_size']             = 100;
-            $config['max_width']            = 1024;
-            $config['max_height']           = 768;
+            $config['max_size']             = 1500;
+            $config['max_width']            = 3000;
+            $config['max_height']           = 3000;
 
             $this->load->library('upload', $config);
             
