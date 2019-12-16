@@ -53,39 +53,6 @@
         </ol>
       </div>
       
-      <!--
-      <?php if (logged_in()) {
-          ?>
-        
-          <form action="<?php echo base_url().'photos/upload-image' ?> " method="post" enctype="multipart/form-data">
-            <fieldset>
-              <legend>Want to add a cat? Choose what best defines it</legend>
-              
-              <input id="indoor-or-outdoor1" type="radio" name="indoor-outdoor" value="Indoor" checked>
-              <label for="indoor-or-outdoor1">Indoor</label>
-              <input id="indoor-or-outdoor2" type="radio" value="Outdoor" name="indoor-outdoor">
-              <label for="indoor-or-outdoor2" >Outdoor</label><br>
-              
-              <input id="personality1" type="checkbox" name="personality[]" value="Loving" checked>
-              <label for="personality1">Loving</label>
-              <input id="personality2" type="checkbox" name="personality[]" value="Lazy">
-              <label for="personality2">Lazy</label>
-              <input id="personality3" type="checkbox" name="personality[]" value="Energetic">
-              <label for="personality3">Energetic</label><br>
-
-              <input type="hidden" id="cat-submit-username" name="cat-submit-username" value="<?php echo $_SESSION['userId'] ?>">
-              <input type="file" name="cat-image" accept="image/png,image/jpeg,image/gif" required>
-              <button type="submit" id="cat-submit-button" name="submit">Submit</button>
-            </fieldset>
-          </form>
-         <?php }
-        else
-        {
-           echo "<p>You must be logged in to submit cat photos</p>";
-        } ?>
-        
-        
-        -->
         <?php if (logged_in()) {
           ?>
           <?php  if(isset($error)){ echo $error;}?>
@@ -110,7 +77,7 @@
             <input type="submit" value="upload" id="cat-submit-button"/>
 
             </form>
-        <?php }
+4        <?php }
         else
         {
            echo "<p>You must be logged in to submit cat photos</p>";

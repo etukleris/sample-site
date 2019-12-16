@@ -1,5 +1,5 @@
     <main class="signup-page">
-]
+
       <div class="signup-container">
 
 
@@ -27,6 +27,7 @@
             <li>
             <input type="submit" name="submit" value="Signup" />
             </li>
+		  </ul>
 
       </form> 
       </div>
